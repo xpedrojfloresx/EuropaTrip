@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viaje Europa 2026 · Itinerario familiar</title>
+<style>
+:root{
+  --ink:#1a2e35; --ink2:#3d5a64; --paper:#f6f1e7; --paper2:#efe7d6;
+  --rail:#c1440e; --rail2:#e07a3f; --gold:#d8a33f; --sea:#2a6f7f; --line:#d8cdb8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.disp{font-family:'Futura','Century Gothic','Trebuchet MS',sans-serif}
+.hero{background:linear-gradient(135deg,#16323a,#0f242a 60%,#1c0f08);color:#f6f1e7;padding:64px 0 54px;position:relative;overflow:hidden;border-bottom:5px solid var(--rail)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:repeating-linear-gradient(90deg,var(--rail) 0 26px,transparent 26px 52px);opacity:.25}
+.kicker{letter-spacing:.42em;text-transform:uppercase;font-size:12px;color:var(--gold);font-family:'Futura','Century Gothic',sans-serif;margin-bottom:18px}
+.hero h1{font-size:54px;line-height:1.02;font-weight:800;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--rail2)}
+.hero p.sub{margin-top:18px;font-size:19px;max-width:680px;color:#e9dfca}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:rgba(255,255,255,.07);border:1px solid rgba(216,163,63,.4);border-radius:30px;padding:8px 16px;font-size:14px;font-family:'Futura','Century Gothic',sans-serif;letter-spacing:.03em}
+.fact b{color:var(--gold)}
+section{padding:46px 0}
+.leg{border-top:1px solid var(--line)}
+.leg-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.leg-num{font-family:'Futura','Century Gothic',sans-serif;font-weight:800;font-size:15px;color:#fff;background:var(--rail);border-radius:8px;padding:5px 11px;letter-spacing:.05em}
+.leg-head h2{font-size:33px;letter-spacing:-.3px}
+.leg-dates{font-family:'Futura','Century Gothic',sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--sea);font-weight:700}
+.leg-base{display:inline-block;background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:13px;font-family:'Futura',sans-serif;color:var(--ink2);margin-bottom:22px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.hero h1{font-size:38px}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(26,46,53,.06);display:flex;flex-direction:column}
+.card .ph{aspect-ratio:16/10;overflow:hidden;background:var(--paper2);position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;top:10px;left:10px;background:rgba(26,46,53,.86);color:#fff;font-family:'Futura',sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+.tag.kid{background:var(--gold);color:#3a2a06}
+.tag.foot{background:var(--rail)}
+.card .body{padding:16px 18px 20px}
+.card h3{font-size:20px;margin-bottom:7px}
+.card p{font-size:15px;color:var(--ink2)}
+.card .meta{margin-top:11px;font-family:'Futura',sans-serif;font-size:12.5px;color:var(--sea);letter-spacing:.03em;border-top:1px dashed var(--line);padding-top:9px}
+.note{background:linear-gradient(0deg,#fff,#fffdf6);border-left:4px solid var(--gold);padding:14px 16px;border-radius:0 10px 10px 0;margin-top:22px;font-size:14.5px;color:var(--ink2)}
+.note b{color:var(--ink)}
+.foot-band{background:#16323a;color:#f0e7d3;border-radius:14px;padding:22px 24px;margin-top:26px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.foot-band .ball{font-size:34px}
+.foot-band h4{font-family:'Futura',sans-serif;color:var(--rail2);letter-spacing:.05em;margin-bottom:4px;font-size:16px}
+.foot-band p{font-size:14px;color:#ddd3bd}
+.budget{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.budget table{width:100%;border-collapse:collapse;font-size:15px}
+.budget th,.budget td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.budget th{background:var(--paper2);font-family:'Futura',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.budget td.n{text-align:right;font-variant-numeric:tabular-nums;font-family:'Futura',sans-serif}
+.budget tr.tot td{font-weight:800;background:#16323a;color:#fff;font-size:16px}
+.legend{font-size:13px;color:var(--ink2);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+footer.cred{padding:30px 0 50px;color:var(--ink2);font-size:12.5px;text-align:center}
+a{color:var(--rail)}
+.tl{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tl a{flex:1;min-width:120px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;font-family:'Futura',sans-serif;font-size:12.5px;color:var(--ink2);transition:.2s}
+.tl a:hover{background:var(--rail);color:#fff;border-color:var(--rail)}
+.tl a b{display:block;font-size:11px;color:var(--rail);margin-bottom:2px}
+.tl a:hover b{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="hero"><div class="wrap">
+<div class="kicker">Itinerario familiar · Noviembre–Diciembre 2026</div>
+<h1>Países Bajos, Alemania y Bélgica<br><em>en tren</em>, con escala futbolera</h1>
+<p class="sub">20 noches para 5 personas, de Ámsterdam a Madrid. Arquitectura, ciudades caminables, mercados navideños y dos estadios — Dortmund y el Bernabéu — con Berlín de regalo.</p>
+<div class="facts">
+<div class="fact"><b>5</b> bases · pocas mudanzas</div>
+<div class="fact"><b>20</b> noches</div>
+<div class="fact">Casi todo en <b>tren</b></div>
+<div class="fact"><b>2</b> estadios + 1 opcional</div>
+<div class="fact"><b>3</b> mercados navideños</div>
+</div>
+</div></div>
+
+<div class="wrap"><div class="tl">
+<a href="#amsterdam"><b>13–18 Nov</b>Ámsterdam</a>
+<a href="#colonia"><b>18–22 Nov</b>Colonia</a>
+<a href="#hamburgo"><b>22–27 Nov</b>Hamburgo + Berlín</a>
+<a href="#gante"><b>27 Nov–1 Dic</b>Gante</a>
+<a href="#madrid"><b>1–3 Dic</b>Madrid</a>
+</div></div>
+<div class="wrap">
+
+<section class="leg" id="amsterdam">
+<div class="leg-head"><span class="leg-num">Tramo 01</span><h2>Ámsterdam</h2><span class="leg-dates">13–18 Nov · 5 noches</span></div>
+<div class="leg-base">Base Países Bajos · tren a todos lados</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Canal_houses_and_Oude_Kerk_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg/1280px-Canal_houses_and_Oude_Kerk_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg" alt="Canal Ring + Jordaan" loading="lazy"><span class="tag ">Arquitectura</span></div><div class="body"><h3>Canal Ring + Jordaan</h3><p>Casas inclinadas, puentes y los canales patrimonio de la UNESCO. Caminá el cinturón de canales y perdete por el barrio Jordaan. Rijksmuseum y Van Gogh para el arte.</p><div class="meta">Caminable · museos de primer nivel</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rotterdam%2C_station_Blaak%2Bhet_Potlood_en_de_kubuswoningen_foto5_2013-07-07_16.28.jpg/1280px-Rotterdam%2C_station_Blaak%2Bhet_Potlood_en_de_kubuswoningen_foto5_2013-07-07_16.28.jpg" alt="Rotterdam" loading="lazy"><span class="tag ">Day trip · 40 min</span></div><div class="body"><h3>Rotterdam</h3><p>La capital de la arquitectura contemporánea: las Casas Cubo (Kubuswoningen), el Markthal y el puente Erasmus. El contraste total con el casco histórico holandés.</p><div class="meta">Tren directo · ida y vuelta en el día</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/View_of_Utrecht_Dom_Tower_from_Stadhuisbrug_2024-11-28.jpg/1280px-View_of_Utrecht_Dom_Tower_from_Stadhuisbrug_2024-11-28.jpg" alt="Utrecht" loading="lazy"><span class="tag ">Day trip · 25 min</span></div><div class="body"><h3>Utrecht</h3><p>Canales de doble nivel únicos en el mundo, con cafés al borde del agua. Subí la Domtoren, la torre de iglesia más alta de los Países Bajos.</p><div class="meta">El más cercano · ideal medio día</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Delft_Central_Market_Square.jpg/1280px-Delft_Central_Market_Square.jpg" alt="Delft + La Haya" loading="lazy"><span class="tag ">Day trip</span></div><div class="body"><h3>Delft + La Haya</h3><p>Delft: cerámica azul y plaza medieval. Combinable con La Haya (Binnenhof y el museo Mauritshuis con "La joven de la perla").</p><div class="meta">Dos ciudades en un día</div></div></div>
+</div>
+<div class="note"><b>Para los chicos:</b> paseo en barco por los canales (los peques aman ir por el agua), y el zoo <b>Artis</b> en pleno centro, con planetario. Si llueve, el <b>NEMO Science Museum</b> es puro tocar y experimentar.</div>
+</section>
+
+<section class="leg" id="colonia">
+<div class="leg-head"><span class="leg-num">Tramo 02</span><h2>Colonia</h2><span class="leg-dates">18–22 Nov · 4 noches</span></div>
+<div class="leg-base">Base futbolera · Dortmund a 1h23m en tren</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Cologne_Germany_Exterior-view-of-Cologne-Cathedral-06.jpg/1280px-Cologne_Germany_Exterior-view-of-Cologne-Cathedral-06.jpg" alt="Kölner Dom" loading="lazy"><span class="tag ">Arquitectura</span></div><div class="body"><h3>Kölner Dom</h3><p>La catedral gótica más imponente de Alemania, sobreviviente de la guerra. Subí los 533 escalones de la torre para ver toda la ciudad y el Rin.</p><div class="meta">Abierta 6–20h · gratis</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Weihnachtsmarkt_Dom_2011_2.jpg/1280px-Weihnachtsmarkt_Dom_2011_2.jpg" alt="Weihnachtsmarkt del Dom" loading="lazy"><span class="tag ">Mercado navideño</span></div><div class="body"><h3>Weihnachtsmarkt del Dom</h3><p>El mercado a los pies de la catedral abre el 16/11: luces, vino caliente, artesanías. El primero que agarrás del viaje.</p><div class="meta">Abre 16 Nov · llegás justo</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Signal_iduna_park_stadium_dortmund_2.jpg/1280px-Signal_iduna_park_stadium_dortmund_2.jpg" alt="Signal Iduna Park" loading="lazy"><span class="tag foot">⚽ Estadio</span></div><div class="body"><h3>Signal Iduna Park</h3><p>El "Muro Amarillo": 81.365 localidades y la mayor hinchada promedio del mundo. Si cae partido el finde 21–22, lo vivís; si no, el tour igual vale.</p><div class="meta">Partido finde 21–22 · o tour guiado</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Neuer_Zollhof_D%C3%BCsseldorf_at_Blue_Hour.JPG/1280px-Neuer_Zollhof_D%C3%BCsseldorf_at_Blue_Hour.JPG" alt="Düsseldorf" loading="lazy"><span class="tag ">Day trip · 30 min</span></div><div class="body"><h3>Düsseldorf</h3><p>El Medienhafen con los edificios ondulados de Frank Gehry, arquitectura contemporánea de primera, y la avenida Königsallee.</p><div class="meta">Tren rápido · medio día</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Oktogon-Kuppelmosaik-Aachener-Dom-2026.jpg/1280px-Oktogon-Kuppelmosaik-Aachener-Dom-2026.jpg" alt="Aquisgrán (Aachen)" loading="lazy"><span class="tag ">Day trip</span></div><div class="body"><h3>Aquisgrán (Aachen)</h3><p>La catedral de Carlomagno, primer sitio UNESCO de Alemania. Bombones y aguas termales en la frontera con Bélgica y Países Bajos.</p><div class="meta">Historia carolingia</div></div></div>
+</div>
+<div class="foot-band"><span class="ball">⚽</span><div><h4>Tu ventana de fútbol #1</h4><p>El finde 21–22 nov es tu mejor chance de partido oficial: estás basado en Colonia y Dortmund está a 1h23m (trenes cada 8 min, desde €11). Las entradas se liberan 4–6 semanas antes; poné alerta para octubre.</p></div></div>
+</section>
+
+<section class="leg" id="hamburgo">
+<div class="leg-head"><span class="leg-num">Tramo 03</span><h2>Hamburgo</h2><span class="leg-dates">22–27 Nov · 5 noches</span></div>
+<div class="leg-base">Base norte · incluye 1 noche en Berlín</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Hamburg%2C_Speicherstadt%2C_Wasserschloss_--_2016_--_3265-71.jpg/1280px-Hamburg%2C_Speicherstadt%2C_Wasserschloss_--_2016_--_3265-71.jpg" alt="Speicherstadt + HafenCity" loading="lazy"><span class="tag ">Arquitectura</span></div><div class="body"><h3>Speicherstadt + HafenCity</h3><p>El barrio de almacenes de ladrillo rojo más grande del mundo (UNESCO), y al lado la HafenCity ultramoderna con la Elbphilharmonie. Subí a su plaza panorámica (gratis).</p><div class="meta">Patrimonio UNESCO · puerto</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Hamburg%2C_Speicherstadt%2C_Block_D%2BL_--_2023_--_6577.jpg/1280px-Hamburg%2C_Speicherstadt%2C_Block_D%2BL_--_2023_--_6577.jpg" alt="Miniatur Wunderland" loading="lazy"><span class="tag kid">Para chicos ★</span></div><div class="body"><h3>Miniatur Wunderland</h3><p>El mayor ferromodelismo del mundo: trenes, aeropuerto con aviones que despegan, ciudades en miniatura. Niños (y grandes) quedan hipnotizados horas. Reservá online.</p><div class="meta">Imperdible con menores · reservar</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Holstentor_in_L%C3%BCbeck_2015.jpg/1280px-Holstentor_in_L%C3%BCbeck_2015.jpg" alt="Lübeck" loading="lazy"><span class="tag ">Day trip · 45 min</span></div><div class="body"><h3>Lübeck</h3><p>La "reina del Báltico": la puerta Holstentor de cuento, gótico de ladrillo y el mazapán original de Niederegger.</p><div class="meta">Gótico báltico · medio día</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/1280px-Brandenburger_Tor_abends.jpg" alt="Berlín" loading="lazy"><span class="tag ">⭐ 1 noche</span></div><div class="body"><h3>Berlín</h3><p>La capital merece dormir ahí: Puerta de Brandeburgo, restos del Muro (East Side Gallery), Reichstag con su cúpula de cristal (entrada gratis, reservar). Historia del siglo XX en vivo.</p><div class="meta">2h en tren · dormís 1 noche</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Berlin_Museumsinsel_Fernsehturm.jpg/1280px-Berlin_Museumsinsel_Fernsehturm.jpg" alt="Isla de los Museos" loading="lazy"><span class="tag ">Berlín</span></div><div class="body"><h3>Isla de los Museos</h3><p>Cinco museos en una isla del Spree, UNESCO: el Pergamon y el busto de Nefertiti. Para chicos, el Museo de Historia Natural tiene el dinosaurio más alto del mundo.</p><div class="meta">UNESCO · dino gigante para peques</div></div></div>
+</div>
+<div class="note"><b>Cómo encaja Berlín:</b> desde Hamburgo son solo ~2h en tren (ICE, muy frecuente). Vas un día, dormís 1 noche allá y volvés, o lo usás de bisagra. Hamburgo→Berlín y vuelta cuesta poco si reservás con anticipación.</div>
+</section>
+
+<section class="leg" id="gante">
+<div class="leg-head"><span class="leg-num">Tramo 04</span><h2>Gante</h2><span class="leg-dates">27 Nov–1 Dic · 4 noches</span></div>
+<div class="leg-base">Base Bélgica · todo a 25–60 min en tren</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Graslei_Ghent.jpg/1280px-Graslei_Ghent.jpg" alt="Gante (Graslei)" loading="lazy"><span class="tag ">Arquitectura</span></div><div class="body"><h3>Gante (Graslei)</h3><p>Menos turística y más barata que Brujas, con un casco medieval espectacular sobre el río Lys y el castillo de los Condes (Gravensteen). Tu base ideal.</p><div class="meta">Caminable · base económica</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Brugge_Rozenhoedkaai_R02.jpg/1280px-Brugge_Rozenhoedkaai_R02.jpg" alt="Brujas" loading="lazy"><span class="tag ">Day trip · 25 min</span></div><div class="body"><h3>Brujas</h3><p>La ciudad-postal de Bélgica: canales, el campanario (Belfort) y chocolate por todos lados. Su mercado navideño abre el 20/11. Llegá temprano.</p><div class="meta">Mercado navideño · llegás a tiempo</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Grand-Place_Flower_Carpet_2018_%2818mm%29.jpg/1280px-Grand-Place_Flower_Carpet_2018_%2818mm%29.jpg" alt="Bruselas" loading="lazy"><span class="tag ">Day trip · 30 min</span></div><div class="body"><h3>Bruselas</h3><p>La Grand-Place, una de las plazas más bellas de Europa, el Atomium y los museos. Mercado navideño desde fines de noviembre.</p><div class="meta">Capital · museos + Atomium</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Antwerpen%2C_centraal_station_oeg7051_IMG_1179_2017-08-27_14.34.jpg/1280px-Antwerpen%2C_centraal_station_oeg7051_IMG_1179_2017-08-27_14.34.jpg" alt="Amberes" loading="lazy"><span class="tag ">Day trip · 1h</span></div><div class="body"><h3>Amberes</h3><p>La estación central es una catedral ferroviaria (de las más lindas del mundo), más moda, diamantes y Rubens.</p><div class="meta">Para los fans del tren y el diseño</div></div></div>
+</div>
+<div class="note"><b>Para los chicos:</b> Bélgica es tierra de chocolate y papas fritas — un taller de chocolate en Brujas suele encantar. En Bruselas, el Atomium por dentro es pura aventura espacial retro.</div>
+</section>
+
+<section class="leg" id="madrid">
+<div class="leg-head"><span class="leg-num">Tramo 05</span><h2>Madrid</h2><span class="leg-dates">1–3 Dic · cierre</span></div>
+<div class="leg-base">Vuelo Bruselas→Madrid · regreso 3 Dic</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Estadio_Santiago_Bernab%C3%A9u_-_01.jpg/1280px-Estadio_Santiago_Bernab%C3%A9u_-_01.jpg" alt="Santiago Bernabéu" loading="lazy"><span class="tag foot">⚽ Estadio</span></div><div class="body"><h3>Santiago Bernabéu</h3><p>El templo del Real Madrid, recién renovado. El tour ("Bernabéu Tour") está garantizado todo el año; si la jornada de Liga cae el 1–2 dic, podés ver partido. Cierre soñado del viaje.</p><div class="meta">Tour garantizado · quizá partido</div></div></div>
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Plaza_Mayor_de_Madrid_-_01.jpg/1280px-Plaza_Mayor_de_Madrid_-_01.jpg" alt="Plaza Mayor + centro" loading="lazy"><span class="tag ">Ciudad</span></div><div class="body"><h3>Plaza Mayor + centro</h3><p>El corazón histórico: Plaza Mayor, Puerta del Sol y el Palacio Real. El mercado navideño de la Plaza Mayor abre el 28/11, así que lo agarrás.</p><div class="meta">Mercado navideño desde 28 Nov</div></div></div>
+</div>
+<div class="foot-band"><span class="ball">⚽</span><div><h4>Tu ventana de fútbol #2 + estadio asegurado</h4><p>Aunque no caiga partido, el tour del Bernabéu se hace cualquier día: pisás el césped, el túnel y el museo. Y si la jornada de La Liga cae el finde, ves al Madrid de local. Entre Dortmund y Bernabéu, te asegurás de cumplir "ir a alguno de los estadios".</p></div></div>
+</section>
+</div>
+
+<div class="wrap"><section>
+<div class="leg-head"><span class="leg-num" style="background:var(--gold);color:#3a2a06">Opcional</span><h2>Tercer estadio: Johan Cruyff ArenA</h2></div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Arena%2C_Ajax_stadion%2C_Amsterdam.JPG/1280px-Arena%2C_Ajax_stadion%2C_Amsterdam.JPG" alt="Ajax · Ámsterdam" loading="lazy"><span class="tag foot">⚽ Opcional</span></div><div class="body"><h3>Ajax · Ámsterdam</h3><p>Si querés sumar un tercer estadio sin desviarte, el del Ajax está en Ámsterdam. Tour del estadio disponible casi todos los días; queda perfecto en los 5 días de base allá.</p><div class="meta">Tour cualquier día · en tu primera base</div></div></div>
+<div class="card" style="justify-content:center"><div class="body"><h3>La lógica de los 3 estadios</h3><p><b>Dortmund</b> (con partido si cae el finde) + <b>Bernabéu</b> (tour seguro, quizá partido) cumplen tu meta. <b>Ajax</b> es el bonus si el grupo tiene ganas. Así, pase lo que pase con los fixtures, te vas con al menos un estadio pisado.</p></div></div>
+</div>
+</section></div>
+
+<div class="wrap"><section id="logistica">
+<div class="leg-head"><span class="leg-num" style="background:var(--sea)">Plata & logística</span><h2>Presupuesto y trenes</h2></div>
+<div class="budget"><table>
+<tr><th>Concepto</th><th>Detalle</th><th style="text-align:right">USD (5 pers.)</th></tr>
+<tr><td>Alojamiento</td><td>~17 noches en deptos para 5 + 2 hotel Berlín/Madrid</td><td class="n">5.500–7.500</td></tr>
+<tr><td>Trenes entre bases</td><td>AMS→Colonia→Hamburgo→(Berlín)→Gante, reservando temprano</td><td class="n">900–1.400</td></tr>
+<tr><td>Vuelo Bruselas→Madrid</td><td>Único tramo no-tren · 5 pasajes</td><td class="n">350–700</td></tr>
+<tr><td>Day trips (tren regional)</td><td>Rotterdam, Utrecht, Dortmund, Lübeck, Brujas, etc.</td><td class="n">600–900</td></tr>
+<tr><td>Estadios</td><td>Tour Bernabéu + Dortmund/Ajax (entradas de partido aparte)</td><td class="n">250–500</td></tr>
+<tr><td>Comida, museos, varios</td><td>Estimado familiar para 20 días</td><td class="n">2.500–3.500</td></tr>
+<tr class="tot"><td colspan="2">Total estimado (sin vuelos internacionales)</td><td class="n">~10.000–14.000</td></tr>
+</table></div>
+<div class="note"><b>Regla de oro de los trenes:</b> en Alemania (Deutsche Bahn) y NS/Bélgica, reservar 2–3 meses antes baja los precios drásticamente (de €70 a €15–20 por tramo). Mirá tarifas <b>Sparpreis/Super Sparpreis</b>. Para day trips regionales no hace falta reservar, son tarifa fija.</div>
+<div class="note"><b>Fechas que dependen de calendarios aún no publicados:</b> el fixture de la Bundesliga sale el 2/7 y el de La Liga el 30/6, pero el día y hora exactos se confirman 3–5 semanas antes. El finde del 14/11 hay parón de selecciones (sin liga). Tus ventanas reales de partido son el <b>21–22 nov</b> (Dortmund) y el <b>1–2 dic</b> (Real Madrid).</div>
+<div class="legend">
+<span><span class="dot" style="background:var(--rail)"></span> Estadio / fútbol</span>
+<span><span class="dot" style="background:var(--gold)"></span> Actividad para chicos</span>
+<span><span class="dot" style="background:var(--sea)"></span> Day trip en tren</span>
+</div>
+</section></div>
+<footer class="cred"><div class="wrap">
+Itinerario armado para una familia de 5 · Nov–Dic 2026 · Córdoba → Europa.<br>
+Fotos: Wikimedia Commons (licencias libres). Precios y horarios orientativos — confirmá tarifas al reservar.
+</div></footer>
+</body>
+</html>
