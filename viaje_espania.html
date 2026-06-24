@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viaje Europa 2026 · Itinerario familiar</title>
+<style>
+:root{
+  --ink:#1a2e35; --ink2:#3d5a64; --paper:#f6f1e7; --paper2:#efe7d6;
+  --rail:#c1440e; --rail2:#e07a3f; --gold:#d8a33f; --sea:#2a6f7f; --line:#d8cdb8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.disp{font-family:'Futura','Century Gothic','Trebuchet MS',sans-serif}
+.hero{background:linear-gradient(135deg,#16323a,#0f242a 60%,#1c0f08);color:#f6f1e7;padding:64px 0 54px;position:relative;overflow:hidden;border-bottom:5px solid var(--rail)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:repeating-linear-gradient(90deg,var(--rail) 0 26px,transparent 26px 52px);opacity:.25}
+.kicker{letter-spacing:.42em;text-transform:uppercase;font-size:12px;color:var(--gold);font-family:'Futura','Century Gothic',sans-serif;margin-bottom:18px}
+.hero h1{font-size:54px;line-height:1.02;font-weight:800;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--rail2)}
+.hero p.sub{margin-top:18px;font-size:19px;max-width:680px;color:#e9dfca}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:rgba(255,255,255,.07);border:1px solid rgba(216,163,63,.4);border-radius:30px;padding:8px 16px;font-size:14px;font-family:'Futura','Century Gothic',sans-serif;letter-spacing:.03em}
+.fact b{color:var(--gold)}
+section{padding:46px 0}
+.leg{border-top:1px solid var(--line)}
+.leg-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.leg-num{font-family:'Futura','Century Gothic',sans-serif;font-weight:800;font-size:15px;color:#fff;background:var(--rail);border-radius:8px;padding:5px 11px;letter-spacing:.05em}
+.leg-head h2{font-size:33px;letter-spacing:-.3px}
+.leg-dates{font-family:'Futura','Century Gothic',sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--sea);font-weight:700}
+.leg-base{display:inline-block;background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:13px;font-family:'Futura',sans-serif;color:var(--ink2);margin-bottom:22px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.hero h1{font-size:38px}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(26,46,53,.06);display:flex;flex-direction:column}
+.card .ph{aspect-ratio:16/10;overflow:hidden;background:var(--paper2);position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .ph img{transform:scale(1.05)}
+.tag{position:absolute;top:10px;left:10px;background:rgba(26,46,53,.86);color:#fff;font-family:'Futura',sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+.tag.kid{background:var(--gold);color:#3a2a06}
+.tag.foot{background:var(--rail)}
+.card .body{padding:16px 18px 20px}
+.card h3{font-size:20px;margin-bottom:7px}
+.card p{font-size:15px;color:var(--ink2)}
+.card .meta{margin-top:11px;font-family:'Futura',sans-serif;font-size:12.5px;color:var(--sea);letter-spacing:.03em;border-top:1px dashed var(--line);padding-top:9px}
+.note{background:linear-gradient(0deg,#fff,#fffdf6);border-left:4px solid var(--gold);padding:14px 16px;border-radius:0 10px 10px 0;margin-top:22px;font-size:14.5px;color:var(--ink2)}
+.note b{color:var(--ink)}
+.foot-band{background:#16323a;color:#f0e7d3;border-radius:14px;padding:22px 24px;margin-top:26px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.foot-band .ball{font-size:34px}
+.foot-band h4{font-family:'Futura',sans-serif;color:var(--rail2);letter-spacing:.05em;margin-bottom:4px;font-size:16px}
+.foot-band p{font-size:14px;color:#ddd3bd}
+.budget{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.budget table{width:100%;border-collapse:collapse;font-size:15px}
+.budget th,.budget td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.budget th{background:var(--paper2);font-family:'Futura',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+.budget td.n{text-align:right;font-variant-numeric:tabular-nums;font-family:'Futura',sans-serif}
+.budget tr.tot td{font-weight:800;background:#16323a;color:#fff;font-size:16px}
+.legend{font-size:13px;color:var(--ink2);margin-top:14px;display:flex;gap:16px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+footer.cred{padding:30px 0 50px;color:var(--ink2);font-size:12.5px;text-align:center}
+a{color:var(--rail)}
+.tl{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tl a{flex:1;min-width:110px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;font-family:'Futura',sans-serif;font-size:12.5px;color:var(--ink2);transition:.2s}
+.tl a:hover{background:var(--rail);color:#fff;border-color:var(--rail)}
+.tl a b{display:block;font-size:11px;color:var(--rail);margin-bottom:2px}
+.tl a:hover b{color:#fff}
+.backbar{position:sticky;top:0;z-index:60;background:rgba(15,36,42,.97);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:1px solid rgba(216,163,63,.35)}
+.backbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px;padding-bottom:11px}
+.backbar a.back{color:#f6f1e7;text-decoration:none;font-family:'Futura','Century Gothic',sans-serif;font-size:13px;letter-spacing:.04em;display:inline-flex;align-items:center;gap:7px;transition:color .2s}
+.backbar a.back:hover{color:var(--gold)}
+.backbar .where{font-family:'Futura','Century Gothic',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+@media(max-width:560px){.backbar .where{display:none}}
+</style>
+</head>
+<body>
+
+<div class="backbar"><div class="wrap">
+<a class="back" href="index.html">← Volver a elegir variante</a>
+<span class="where">Variante España</span>
+</div></div>
+
+<div class="hero"><div class="wrap">
+<div class="kicker">Itinerario familiar · Noviembre–Diciembre 2026</div>
+<h1>Países Bajos, Alemania y España<br><em>en tren</em>, con escala futbolera</h1>
+<p class="sub">20 noches para 5 personas, de Ámsterdam a Madrid. Arquitectura, ciudades caminables, mercados navideños y dos estadios — Dortmund y el Bernabéu — con Berlín y el sur de España de regalo.</p>
+<div class="facts">
+<div class="fact"><b>6</b> bases</div>
+<div class="fact"><b>20</b> noches</div>
+<div class="fact">Tren + AVE</div>
+<div class="fact"><b>2</b> estadios + 1 opcional</div>
+<div class="fact"><b>3</b> mercados navideños</div>
+</div>
+</div></div>
+
+<div class="wrap"><div class="tl">
+<a href="#amsterdam"><b>13–18 Nov</b>Ámsterdam</a>
+<a href="#colonia"><b>18–22 Nov</b>Colonia</a>
+<a href="#hamburgo"><b>22–27 Nov</b>Hamburgo + Berlín</a>
+<a href="#sevilla"><b>27–29 Nov</b>Sevilla</a>
+<a href="#valencia"><b>29 Nov–1 Dic</b>Valencia</a>
+<a href="#madrid"><b>1–3 Dic</b>Madrid</a>
+</div></div>
+
+<div class="wrap">
+
+<!-- AMSTERDAM -->
+<section class="leg" id="amsterdam">
+<div class="leg-head"><span class="leg-num">Tramo 01</span><h2>Ámsterdam</h2><span class="leg-dates">13–18 Nov · 5 noches</span></div>
+<div class="leg-base">Base Países Bajos · tren a todos lados</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Houses%20and%20canals%20in%20Amsterdam%20(26277449625).jpg?width=1100" alt="Ámsterdam"><span class="tag">Arquitectura</span></div><div class="body"><h3>Canal Ring + Jordaan</h3><p>Casas inclinadas, puentes y los canales patrimonio de la UNESCO. Caminá el cinturón de canales y perdete por el Jordaan. Rijksmuseum y Van Gogh para el arte.</p><div class="meta">Caminable · museos de primer nivel</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rotterdam,%20station%20Blaak%2Bhet%20Potlood%20en%20de%20kubuswoningen%20foto5%202013-07-07%2016.28.jpg?width=1100" alt="Rotterdam"><span class="tag">Day trip · 40 min</span></div><div class="body"><h3>Rotterdam</h3><p>La capital de la arquitectura contemporánea: las Casas Cubo (Kubuswoningen), el Markthal y el puente Erasmus. El contraste total con el casco histórico holandés.</p><div class="meta">Tren directo · ida y vuelta en el día</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Utrecht%20Dom%20Tower%20from%20Stadhuisbrug%202024-11-28.jpg?width=1100" alt="Utrecht"><span class="tag">Day trip · 25 min</span></div><div class="body"><h3>Utrecht</h3><p>Canales de doble nivel únicos en el mundo, con cafés al borde del agua. Subí la Domtoren, la torre de iglesia más alta de los Países Bajos.</p><div class="meta">El más cercano · ideal medio día</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Delft%20Central%20Market%20Square.jpg?width=1100" alt="Delft y La Haya"><span class="tag">Day trip</span></div><div class="body"><h3>Delft + La Haya</h3><p>Delft: cerámica azul y plaza medieval. Combinable con La Haya (Binnenhof y el Mauritshuis con "La joven de la perla").</p><div class="meta">Dos ciudades en un día</div></div></div>
+</div>
+<div class="note"><b>Para los chicos:</b> paseo en barco por los canales (los peques aman ir por el agua), y el zoo <b>Artis</b> en pleno centro, con planetario. Si llueve, el <b>NEMO Science Museum</b> es puro tocar y experimentar.</div>
+</section>
+
+<!-- COLONIA -->
+<section class="leg" id="colonia">
+<div class="leg-head"><span class="leg-num">Tramo 02</span><h2>Colonia</h2><span class="leg-dates">18–22 Nov · 4 noches</span></div>
+<div class="leg-base">Base futbolera · Dortmund a 1h23m en tren</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cologne%20Germany%20Exterior-view-of-Cologne-Cathedral-07.jpg?width=1100" alt="Catedral de Colonia"><span class="tag">Arquitectura</span></div><div class="body"><h3>Kölner Dom</h3><p>La catedral gótica más imponente de Alemania, sobreviviente de la guerra. Subí los 533 escalones de la torre para ver toda la ciudad y el Rin.</p><div class="meta">Abierta 6–20h · gratis</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Weihnachtsmarkt%20Dom%202011%202.jpg?width=1100" alt="Mercado navideño Colonia"><span class="tag">Mercado navideño</span></div><div class="body"><h3>Weihnachtsmarkt del Dom</h3><p>El mercado a los pies de la catedral abre el 16/11: luces, vino caliente, artesanías. El primero que agarrás del viaje.</p><div class="meta">Abre 16 Nov · llegás justo</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Signal%20iduna%20park%20stadium%20dortmund%201.jpg?width=1100" alt="Signal Iduna Park"><span class="tag foot">⚽ Estadio</span></div><div class="body"><h3>Signal Iduna Park</h3><p>El "Muro Amarillo": 81.365 localidades y la mayor hinchada promedio del mundo. Si cae partido el finde 21–22, lo vivís; si no, el tour igual vale.</p><div class="meta">Partido finde 21–22 · o tour guiado</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%BCsseldorf,%20Medienhafen.jpg?width=1100" alt="Düsseldorf"><span class="tag">Day trip · 30 min</span></div><div class="body"><h3>Düsseldorf</h3><p>El Medienhafen con los edificios ondulados de Frank Gehry, arquitectura contemporánea de primera, y la avenida Königsallee.</p><div class="meta">Tren rápido · medio día</div></div></div>
+</div>
+<div class="foot-band"><span class="ball">⚽</span><div><h4>Tu ventana de fútbol #1</h4><p>El finde 21–22 nov es tu mejor chance de partido oficial: estás basado en Colonia y Dortmund está a 1h23m (trenes cada 8 min, desde €11). Las entradas se liberan 4–6 semanas antes; poné alerta para octubre.</p></div></div>
+</section>
+
+<!-- HAMBURGO + BERLIN -->
+<section class="leg" id="hamburgo">
+<div class="leg-head"><span class="leg-num">Tramo 03</span><h2>Hamburgo</h2><span class="leg-dates">22–27 Nov · 5 noches</span></div>
+<div class="leg-base">Base norte · incluye 2 noches en Berlín (opción)</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hamburg,%20Speicherstadt,%20Wasserschloss%20--%202016%20--%203181.jpg?width=1100" alt="Speicherstadt Hamburgo"><span class="tag">Arquitectura</span></div><div class="body"><h3>Speicherstadt + HafenCity</h3><p>El barrio de almacenes de ladrillo rojo más grande del mundo (UNESCO), y al lado la HafenCity ultramoderna con la Elbphilharmonie. Subí a su plaza panorámica (gratis).</p><div class="meta">Patrimonio UNESCO · puerto</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Miniatur%20Wunderland%20building%2001.JPG?width=1100" alt="Miniatur Wunderland"><span class="tag kid">Para chicos ★</span></div><div class="body"><h3>Miniatur Wunderland</h3><p>El mayor ferromodelismo del mundo: trenes, aeropuerto con aviones que despegan, ciudades en miniatura. Niños (y grandes) quedan hipnotizados horas. Reservá online.</p><div class="meta">Imperdible con menores · reservar</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Holstentor%20in%20L%C3%BCbeck%202015.jpg?width=1100" alt="Lübeck"><span class="tag">Day trip · 45 min</span></div><div class="body"><h3>Lübeck</h3><p>La "reina del Báltico": la puerta Holstentor de cuento, gótico de ladrillo y el mazapán original de Niederegger.</p><div class="meta">Gótico báltico · medio día</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Brandenburger%20Tor%20abends.jpg?width=1100" alt="Berlín"><span class="tag">⭐ 2 noches (opc.)</span></div><div class="body"><h3>Berlín</h3><p>La capital merece dormir ahí: Puerta de Brandeburgo, restos del Muro (East Side Gallery), Reichstag con su cúpula de cristal (gratis, reservar) y la Isla de los Museos. Para chicos, el dinosaurio más alto del mundo en el Museo de Historia Natural.</p><div class="meta">2h en tren · 2 noches</div></div></div>
+</div>
+<div class="note"><b>Cómo encaja Berlín:</b> desde Hamburgo son ~2h en tren (ICE, muy frecuente). Con 2 noches lo disfrutás de verdad: un día completo para el centro histórico y otro para museos. Hamburgo queda de base para Lübeck y el puerto.</div>
+</section>
+
+<!-- SEVILLA -->
+<section class="leg" id="sevilla">
+<div class="leg-head"><span class="leg-num">Tramo 04</span><h2>Sevilla</h2><span class="leg-dates">27–29 Nov · 2 noches</span></div>
+<div class="leg-base">Vuelo Alemania → Sevilla · arranca el sur</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaza%20de%20Espa%C3%B1a%20(Sevilla)%20-%2001.jpg?width=1100" alt="Plaza de España Sevilla"><span class="tag">Arquitectura</span></div><div class="body"><h3>Plaza de España + Real Alcázar</h3><p>La plaza semicircular más espectacular de España (sí, la de Star Wars), y el Real Alcázar, palacio mudéjar de jardines infinitos. Caminable y de cuento.</p><div class="meta">Mudéjar · UNESCO</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Giralda,%20Sevilla.JPG?width=1100" alt="Catedral y Giralda Sevilla"><span class="tag">Casco histórico</span></div><div class="body"><h3>Catedral + La Giralda</h3><p>La catedral gótica más grande del mundo y su torre, la Giralda, antiguo minarete almohade. Alrededor, el barrio de Santa Cruz para perderse.</p><div class="meta">Subida sin escaleras (rampas)</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita-Catedral%20de%20C%C3%B3rdoba%20(por%20dentro).JPG?width=1100" alt="Mezquita de Córdoba"><span class="tag">Day trip · 45 min AVE</span></div><div class="body"><h3>Córdoba</h3><p>La Mezquita-Catedral con su bosque de arcos rojos y blancos, una de las maravillas de Europa. A 45 min en AVE — y un guiño lindo a tu Córdoba natal.</p><div class="meta">AVE rápido · medio día</div></div></div>
+<div class="card" style="justify-content:center"><div class="body"><h3>Por qué Sevilla primero</h3><p>Volás del norte de Alemania directo al sur de España y vas subiendo: Sevilla → Valencia → Madrid es una diagonal limpia en AVE, sin volver sobre tus pasos. El clima en el sur en noviembre es el más suave del viaje.</p></div></div>
+</div>
+<div class="note"><b>Para los chicos:</b> paseo en barco por el Guadalquivir y las Setas de Sevilla (Metropol Parasol), la pasarela de madera ondulada con mirador — les encanta subir.</div>
+</section>
+
+<!-- VALENCIA -->
+<section class="leg" id="valencia">
+<div class="leg-head"><span class="leg-num">Tramo 05</span><h2>Valencia</h2><span class="leg-dates">29 Nov–1 Dic · 2 noches</span></div>
+<div class="leg-base">AVE desde el sur · contraste futurista</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Museo%20Pr%C3%ADncipe%20Felipe,%20Ciudad%20de%20las%20Artes%20y%20las%20Ciencias,%20Valencia,%20Espa%C3%B1a,%202014-06-29,%20DD%2056.JPG?width=1100" alt="Ciudad de las Artes y las Ciencias"><span class="tag">Arquitectura</span></div><div class="body"><h3>Ciudad de las Artes y las Ciencias</h3><p>El complejo futurista de Calatrava: formas blancas imposibles reflejadas en el agua. Lo opuesto exacto a Sevilla y Brujas. Imperdible para vos como técnico-artista.</p><div class="meta">Calatrava · arquitectura contemporánea</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Oceanografic%20Valencia.JPG?width=1100" alt="Oceanogràfic Valencia"><span class="tag kid">Para chicos ★</span></div><div class="body"><h3>Oceanogràfic</h3><p>El acuario más grande de Europa, dentro del mismo complejo: túneles bajo tiburones, beluga, pingüinos. Un día entero de aventura para los menores.</p><div class="meta">Acuario #1 de Europa</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/El%20mercado%20central%20de%20Valencia.JPG?width=1100" alt="Mercado Central Valencia"><span class="tag">Casco histórico</span></div><div class="body"><h3>Mercado Central + casco antiguo</h3><p>Uno de los mercados modernistas más bonitos de Europa, la Lonja de la Seda (UNESCO) y la catedral. Y la paella, que es de acá.</p><div class="meta">Modernismo · gastronomía</div></div></div>
+<div class="card" style="justify-content:center"><div class="body"><h3>La bisagra del viaje</h3><p>Valencia es el contraste perfecto: después de lo medieval del norte y lo mudéjar de Sevilla, la arquitectura futurista. Y queda en el camino del AVE hacia Madrid para cerrar.</p></div></div>
+</div>
+</section>
+
+<!-- MADRID -->
+<section class="leg" id="madrid">
+<div class="leg-head"><span class="leg-num">Tramo 06</span><h2>Madrid</h2><span class="leg-dates">1–3 Dic · 2 noches · cierre</span></div>
+<div class="leg-base">AVE desde Valencia · regreso 3 Dic</div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Estadio%20Santiago%20Bernab%C3%A9u%20(01).jpg?width=1100" alt="Santiago Bernabéu"><span class="tag foot">⚽ Estadio</span></div><div class="body"><h3>Santiago Bernabéu</h3><p>El templo del Real Madrid, recién renovado. El tour está garantizado todo el año; si la jornada de Liga cae el finde, podés ver partido. Cierre soñado.</p><div class="meta">Tour garantizado · quizá partido</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaza%20Mayor%20de%20Madrid%2006.jpg?width=1100" alt="Plaza Mayor Madrid"><span class="tag">Compras + centro</span></div><div class="body"><h3>Centro + compras</h3><p>En 2 noches, lo esencial: Plaza Mayor, Gran Vía y Sol para compras, y el Palacio Real. El mercado navideño de Plaza Mayor abre el 28/11. El Prado o Reina Sofía si queda hueco.</p><div class="meta">Mercado navideño · shopping</div></div></div>
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Toledo%20Skyline%20Panorama,%20Spain%20-%20Dec%202006.jpg?width=1100" alt="Toledo"><span class="tag">Day trip · 30 min AVE</span></div><div class="body"><h3>Toledo</h3><p>La ciudad de las tres culturas, amurallada sobre el Tajo: catedral, judería, callejones medievales. A 30 min en AVE, ideal un día entero.</p><div class="meta">UNESCO · el mejor day trip de Madrid</div></div></div>
+<div class="card" style="justify-content:center"><div class="body"><h3>Cierre ajustado</h3><p>Con 2 noches Madrid es intenso: prioridad al Bernabéu y las compras. Toledo entra solo si estirás un día o resignás museos — si lo querés sí o sí, conviene sumarle una noche más a Madrid.</p></div></div>
+</div>
+<div class="foot-band"><span class="ball">⚽</span><div><h4>Tu ventana de fútbol #2 + estadio asegurado</h4><p>Aunque no caiga partido, el tour del Bernabéu se hace cualquier día: pisás el césped, el túnel y el museo. Y si la jornada de La Liga cae el finde, ves al Madrid de local. Entre Dortmund y Bernabéu, te asegurás de cumplir "ir a alguno de los estadios".</p></div></div>
+</section>
+
+</div>
+
+<!-- AJAX OPCIONAL -->
+<div class="wrap"><section>
+<div class="leg-head"><span class="leg-num" style="background:var(--gold);color:#3a2a06">Opcional</span><h2>Tercer estadio: Johan Cruyff ArenA</h2></div>
+<div class="cards">
+<div class="card"><div class="ph"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam%20ArenA%20002.JPG?width=1100" alt="Johan Cruyff ArenA"><span class="tag foot">⚽ Opcional</span></div><div class="body"><h3>Ajax · Ámsterdam</h3><p>Si querés sumar un tercer estadio sin desviarte, el del Ajax está en Ámsterdam. Tour disponible casi todos los días; queda perfecto en los 5 días de base allá.</p><div class="meta">Tour cualquier día · en tu primera base</div></div></div>
+<div class="card" style="justify-content:center"><div class="body"><h3>La lógica de los 3 estadios</h3><p><b>Dortmund</b> (con partido si cae el finde) + <b>Bernabéu</b> (tour seguro, quizá partido) cumplen tu meta. <b>Ajax</b> es el bonus si el grupo tiene ganas. Así, pase lo que pase con los fixtures, te vas con al menos un estadio pisado.</p></div></div>
+</div>
+</section></div>
+
+<!-- PRESUPUESTO -->
+<div class="wrap"><section id="logistica">
+<div class="leg-head"><span class="leg-num" style="background:var(--sea)">Plata & logística</span><h2>Presupuesto y transporte</h2></div>
+<div class="budget"><table>
+<tr><th>Concepto</th><th>Detalle</th><th style="text-align:right">USD (5 pers.)</th></tr>
+<tr><td>Alojamiento</td><td>~18 noches en deptos para 5 + hotel Berlín</td><td class="n">5.500–7.500</td></tr>
+<tr><td>Trenes entre bases (NL+DE)</td><td>AMS→Colonia→Hamburgo→Berlín, reservando temprano</td><td class="n">700–1.100</td></tr>
+<tr><td>Vuelo Alemania→Sevilla</td><td>Tramo norte-sur · 5 pasajes</td><td class="n">400–800</td></tr>
+<tr><td>AVE España</td><td>Sevilla→Valencia→Madrid + day trips (Córdoba, Toledo)</td><td class="n">700–1.100</td></tr>
+<tr><td>Day trips (tren regional)</td><td>Rotterdam, Utrecht, Dortmund, Lübeck, etc.</td><td class="n">500–800</td></tr>
+<tr><td>Estadios</td><td>Tour Bernabéu + Dortmund/Ajax (partidos aparte)</td><td class="n">250–500</td></tr>
+<tr><td>Comida, museos, varios</td><td>Estimado familiar para 20 días</td><td class="n">2.500–3.500</td></tr>
+<tr class="tot"><td colspan="2">Total estimado (sin vuelos internacionales)</td><td class="n">~10.500–14.500</td></tr>
+</table></div>
+<div class="note"><b>Regla de oro de los trenes:</b> en Alemania (Deutsche Bahn) reservar 2–3 meses antes baja precios drásticamente (tarifas <b>Sparpreis/Super Sparpreis</b>). En España, los AVE de Renfe también bajan mucho con anticipación, y hay opciones low-cost (Ouigo, Iryo) en las rutas principales.</div>
+<div class="note"><b>Fechas que dependen de calendarios aún no publicados:</b> el fixture de la Bundesliga sale el 2/7 y el de La Liga el 30/6, pero el día y hora exactos se confirman 3–5 semanas antes. El finde del 14/11 hay parón de selecciones (sin liga). Tus ventanas reales de partido son el <b>21–22 nov</b> (Dortmund, desde Colonia) y el finde que caiga en tu estadía de Madrid (Real Madrid).</div>
+<div class="legend">
+<span><span class="dot" style="background:var(--rail)"></span> Estadio / fútbol</span>
+<span><span class="dot" style="background:var(--gold)"></span> Actividad para chicos</span>
+<span><span class="dot" style="background:var(--sea)"></span> Day trip en tren</span>
+</div>
+</section></div>
+
+<footer class="cred"><div class="wrap">
+Itinerario armado para una familia de 5 · Nov–Dic 2026 · Córdoba → Europa.<br>
+Fotos: Wikimedia Commons (licencias libres). Precios y horarios orientativos — confirmá tarifas y fechas al reservar.
+</div></footer>
+
+</body>
+</html>
